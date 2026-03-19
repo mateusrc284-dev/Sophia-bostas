@@ -1,10 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sophia Bostas 😈</title>
+  <title>Sophia Bostas 💩</title>
+
+  <style>
+    body {
+      background: black;
+      color: white;
+      text-align: center;
+      font-family: Arial;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 50px;
+      color: brown;
+      animation: piscar 1s infinite;
+    }
+
+    @keyframes piscar {
+      0% {opacity: 1;}
+      50% {opacity: 0.3;}
+      100% {opacity: 1;}
+    }
+
+    .coco {
+      position: fixed;
+      top: -50px;
+      font-size: 30px;
+      animation: cair linear infinite;
+    }
+
+    @keyframes cair {
+      to {
+        transform: translateY(110vh);
+      }
+    }
+
+    button {
+      padding: 15px;
+      font-size: 20px;
+      background: brown;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>SOPHIA BOSTAS 😈</h1>
-  <p>Site da zoeira</p>
+
+  <h1>💩 SOPHIA BOSTAS 💩</h1>
+  <p>O site MAIS fedido da internet 😈</p>
+
+  <button onclick="som()">CLICA AQUI 💩</button>
+
+  <audio id="audio">
+    <source src="https://www.soundjay.com/human/fart-01.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function som() {
+      document.getElementById("audio").play();
+    }
+
+    function criarCoco() {
+      const coco = document.createElement("div");
+      coco.classList.add("coco");
+      coco.innerHTML = "💩";
+
+      coco.style.left = Math.random() * 100 + "vw";
+      coco.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+      document.body.appendChild(coco);
+
+      setTimeout(() => {
+        coco.remove();
+      }, 5000);
+    }
+
+    setInterval(criarCoco, 300);
+  </script>
+
 </body>
 </html>
